@@ -1,1 +1,1 @@
-export const BASE_URL = "https://capstone-project-pencatatan.vercel.app/"
+export const BASE_URL = "http://localhost:4493"
