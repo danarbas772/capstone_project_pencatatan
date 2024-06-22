@@ -1,0 +1,101 @@
+api:
+1. All User:
+-> GET
+get self account (nip, role): /api/user/
+get self data profile (all info) : /api/user/profile
+
+-> POST
+login : /api/auth/login
+logout : /api/auth/logout
+
+-> PUT
+update self profile : /api/user/update/profile (?)
+reset self password : /api/user/reset-password
+
+-> DELETE
+
+
+
+2. Admin:
+-> GET 
+get all user data (all info (employee, hr, admin)): /api/user/data
+get user data by nip (all info (employee, hr, admin)): /api/user/data/:nip
+get all employee data (all info): /api/employee/data
+get employee data by nip (all info): /api/employee/data/:nip
+get all employee attendance data : /api/attendance/data
+get employee attendance data by nip : /api/attendance/data/:nip
+get all employee overtime data : /api/employee/data/all
+get overtime data by nip : /api/overtime/data/:nip
+get all employee leave data : /api/leave/data
+get employee leave data by nip: /api/leave/data/:nip
+get all employee payroll data : /api/payroll/data/employee
+get employee payroll by nip : /api/payroll/data/employee/:nip
+download leave letter : /api/employee/leave-letter/:leaveId
+get monthly report attendance : /api/report/attendance/monthly
+get yearly report attendance : /api/report/attendance/yearly
+get monthly overtime attendance : /api/report/overtime/monthly
+get yearly overtime attendance : /api/report/overtime/yearly
+get all report : /api/report/all
+get self data for dashboard : /api/admin/dashboard/data
+
+-> POST
+create employee account : /api/admin/create-employee
+create hr account : /api/admin/create-hr
+reset password by nip : /api/admin/reset-password/:nip
+
+-> PUT
+
+-> DELETE
+delete user by nip : /api/admin/delete-user/:nip
+
+
+
+3. HR:
+-> GET
+get all employee data (all info): /api/employee/data
+get employee data by nip (all info): /api/employee/data/:nip
+get all employee attendance data : /api/attendance/data
+get employee attendance data by nip : /api/attendance/data/:nip
+get all overtime data : /api/overtime/data/all
+get overtime data by nip : /api/overtime/data/:nip
+get all employee leave data : /api/leave/data
+get employee leave data by nip: /api/leave/data/:nip
+get all employee payroll : /api/payroll/data/employee
+get employee payroll by nip : /api/payroll/data/employee/:nip
+download leave letter : /api/employee/leave-letter/:leaveId
+get monthly report attendance : /api/report/attendance/monthly
+get yearly report attendance : /api/report/attendance/yearly
+get monthly overtime attendance : /api/report/overtime/monthly
+get yearly overtime attendance : /api/report/overtime/yearly
+get all report : /api/report/all
+get self data for dashboard : /api/hr/dashboard/data
+
+-> POST
+create-overtime : /api/hr/overtime
+
+-> PUT
+approve employee leave : /api/leave/approve/:leaveId 
+reject employee leave : /api/leave/reject/:leaveId
+
+->DELETE
+
+
+4. Employee:
+-> GET
+get self attendance data : /api/employee/attendance
+get self history leave data : /api/leave/history
+get self remaining leave data : /api/leave/remaining
+get available overtime data : /api/overtime/data
+get self history overtime data : /api/overtime/data/history
+get self payroll data : /api/payroll/data
+get self data for dashboard : /api/employee/dashboard/data
+
+-> POST
+clock-in : /api/attendance/clock-in
+clock-out : /api/attendance/clock-out
+accept overtime : /api/employee/accept-overtime/:overtimeId
+apply leave : /api/leave/apply
+
+-> PUT
+
+-> DELETE
